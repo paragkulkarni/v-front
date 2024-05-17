@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <app-vnav></app-vnav>
+        </div>
+        <div class="col-2"><button (click)="logoutClick()">
+            <i class="fa fa-sign-out fa-3x" aria-hidden="true"></i>
+        </button></div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-1"></div>
+                <form class="col-10 form-group" [formGroup]="wordDesForm" (submit)="wordSubmit()">
+                    <input type="text" formControlName="word" class="mt-2 p-2 form-control wdCss1" placeholder="word"/>
+                    <textarea type="text" formControlName="description" class="mt-2 p-2 form-control wdCss1" placeholder="describe" height="20"></textarea>
+                    <button type="submit" class="mt-2 btn btn-primary">Post</button>
+                </form>
+                <div class="col-1"></div>
+            </div>
+            <div class="mt-4 row">
+                
+                <ul id="ul-css1" *ngFor="let item of wordInfo;" class="p-2">
+                    <span><h2><span>{{item.firstName}}</span> is shared a new word Today</h2></span>
+                    <span><h6><span>Word - </span><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;&nbsp;<span class="wd-css">{{item.word}}</span>&nbsp;&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></h6></span>
+                    <span><h6>Meaning -</h6><span>{{item.description}}</span></span>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    
+</div>

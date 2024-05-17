@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <span class="h1 text-center text-color">VOCAMUCH</span>
+                <span class="mx-auto fst-italic text-end"><ins>Much About Vocabulary</ins></span>
+            </div>
+            <div class="h1 text-start">Login</div>
+            <form class="form form-group" [formGroup]="loginForm" (submit)="loginFormSubmit()">
+                <input class="form-control form-control-lg mt-2 p-2 wdCss1" placeholder="username" type="text" formControlName="username"/>
+                <input class="form-control form-control-lg mt-2 p-2 wdCss1" placeholder="password" type="password" formControlName="password"/>
+                <button type="submit" class="btn btn-primary mt-3" (click)="loginFormSubmit()">Login</button>
+            </form>
+        </div>
+        <div class="col-4">
+
+        </div>
+   
+    </div>
+</div>
